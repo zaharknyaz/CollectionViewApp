@@ -16,6 +16,8 @@
 		3AE684C92723438B004F7036 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE684C72723438B004F7036 /* ProductCell.swift */; };
 		3AE684CA2723438B004F7036 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE684C82723438B004F7036 /* ProductCell.xib */; };
 		3AE684CC27234921004F7036 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE684CB27234921004F7036 /* Menu.swift */; };
+		3AF8C115272F20760079F79A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8C113272F20760079F79A /* GroupCell.swift */; };
+		3AF8C116272F20760079F79A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8C114272F20760079F79A /* GroupCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3AE684C72723438B004F7036 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		3AE684C82723438B004F7036 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		3AE684CB27234921004F7036 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		3AF8C113272F20760079F79A /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		3AF8C114272F20760079F79A /* GroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			children = (
 				3AE684C72723438B004F7036 /* ProductCell.swift */,
 				3AE684C82723438B004F7036 /* ProductCell.xib */,
+				3AF8C113272F20760079F79A /* GroupCell.swift */,
+				3AF8C114272F20760079F79A /* GroupCell.xib */,
 			);
 			path = MenuCells;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 				3AE684BD27233D88004F7036 /* LaunchScreen.storyboard in Resources */,
 				3AE684CA2723438B004F7036 /* ProductCell.xib in Resources */,
 				3AE684BA27233D88004F7036 /* Assets.xcassets in Resources */,
+				3AF8C116272F20760079F79A /* GroupCell.xib in Resources */,
 				3AE684B827233D86004F7036 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +166,7 @@
 				3AE684B127233D86004F7036 /* AppDelegate.swift in Sources */,
 				3AE684C92723438B004F7036 /* ProductCell.swift in Sources */,
 				3AE684B327233D86004F7036 /* SceneDelegate.swift in Sources */,
+				3AF8C115272F20760079F79A /* GroupCell.swift in Sources */,
 				3AE684C527233F43004F7036 /* MenuViewController.swift in Sources */,
 				3AE684CC27234921004F7036 /* Menu.swift in Sources */,
 			);
