@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6601F22735883B0054E25E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6601F12735883B0054E25E /* MainViewController.swift */; };
+		3A6601F527358C090054E25E /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6601F327358C080054E25E /* MainViewCell.swift */; };
+		3A6601F627358C090054E25E /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6601F427358C080054E25E /* MainViewCell.xib */; };
 		3AE684B127233D86004F7036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE684B027233D86004F7036 /* AppDelegate.swift */; };
 		3AE684B327233D86004F7036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE684B227233D86004F7036 /* SceneDelegate.swift */; };
 		3AE684B827233D86004F7036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE684B627233D86004F7036 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A6601F12735883B0054E25E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3A6601F327358C080054E25E /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		3A6601F427358C080054E25E /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 		3AE684AD27233D86004F7036 /* CollectionViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE684B027233D86004F7036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE684B227233D86004F7036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,10 +76,11 @@
 				3AE684B027233D86004F7036 /* AppDelegate.swift */,
 				3AE684B227233D86004F7036 /* SceneDelegate.swift */,
 				3AE684B627233D86004F7036 /* Main.storyboard */,
+				3AE684C427233F43004F7036 /* MenuViewController.swift */,
+				3A6601F12735883B0054E25E /* MainViewController.swift */,
 				3AE684B927233D88004F7036 /* Assets.xcassets */,
 				3AE684BB27233D88004F7036 /* LaunchScreen.storyboard */,
 				3AE684BE27233D88004F7036 /* Info.plist */,
-				3AE684C427233F43004F7036 /* MenuViewController.swift */,
 				3AE684CB27234921004F7036 /* Menu.swift */,
 			);
 			path = CollectionViewApp;
@@ -86,6 +93,8 @@
 				3AE684C82723438B004F7036 /* ProductCell.xib */,
 				3AF8C113272F20760079F79A /* GroupCell.swift */,
 				3AF8C114272F20760079F79A /* GroupCell.xib */,
+				3A6601F327358C080054E25E /* MainViewCell.swift */,
+				3A6601F427358C080054E25E /* MainViewCell.xib */,
 			);
 			path = MenuCells;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE684BD27233D88004F7036 /* LaunchScreen.storyboard in Resources */,
+				3A6601F627358C090054E25E /* MainViewCell.xib in Resources */,
 				3AE684CA2723438B004F7036 /* ProductCell.xib in Resources */,
 				3AE684BA27233D88004F7036 /* Assets.xcassets in Resources */,
 				3AF8C116272F20760079F79A /* GroupCell.xib in Resources */,
@@ -163,10 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6601F22735883B0054E25E /* MainViewController.swift in Sources */,
 				3AE684B127233D86004F7036 /* AppDelegate.swift in Sources */,
 				3AE684C92723438B004F7036 /* ProductCell.swift in Sources */,
 				3AE684B327233D86004F7036 /* SceneDelegate.swift in Sources */,
 				3AF8C115272F20760079F79A /* GroupCell.swift in Sources */,
+				3A6601F527358C090054E25E /* MainViewCell.swift in Sources */,
 				3AE684C527233F43004F7036 /* MenuViewController.swift in Sources */,
 				3AE684CC27234921004F7036 /* Menu.swift in Sources */,
 			);

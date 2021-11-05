@@ -12,8 +12,15 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var groupsCollectionView: UICollectionView!
-    var menu: Menu = Menu()
-    var selectedGroupIndex = 0
+  
+    var group: Group!
+    var selectedGroup: Group? {
+        didSet {
+            if let groupS = self.selectedGroup {
+                self.title = groupS.name
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,13 @@ class MenuViewController: UIViewController {
         self.groupsCollectionView.register(UINib(nibName: "GroupCell", bundle: nil), forCellWithReuseIdentifier: "GroupCell")
         self.groupsCollectionView.dataSource = self
         self.groupsCollectionView.delegate = self
+        
+        if let groups = group.groups, groups.count > 0{
+            selectedGroup = groups.first!
+        }else {
+            selectedGroup = group
+        }
+        
     }
     
 }
@@ -32,10 +46,17 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == groupsCollectionView {
-            return menu.groups.count
+            if let groups = group.groups{
+                return groups.count
+            }else {
+                return 0
+            }
         }else {
-            let group = menu.groups[selectedGroupIndex]
-            return group.products.count
+            if let products = selectedGroup?.products {
+                return products.count
+            }else {
+                return 0
+            }
         }
     }
     
@@ -43,13 +64,15 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         if collectionView == groupsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as! GroupCell
-            let group = menu.groups[indexPath.item]
-            cell.setupCell(group: group)
+            let group = self.group.groups![indexPath.item]
+           
+            let isSelected = group.name == selectedGroup!.name
+            
+            cell.setupCell(group: group, isSelected: isSelected)
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
-            let group = menu.groups[selectedGroupIndex]
-            let product = group.products[indexPath.item]
+            let product = selectedGroup!.products![indexPath.item]
             cell.setupCell(product: product)
             return cell
         }
@@ -59,7 +82,7 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == groupsCollectionView {
-            let groupName = menu.groups[indexPath.item].name
+            let groupName = self.group.groups![indexPath.item].name
             let width = groupName.widthOfString(usingFont: UIFont.systemFont(ofSize: 17))
             
             return CGSize(width: width + 20, height: collectionView.frame.height)
@@ -83,8 +106,10 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == groupsCollectionView {
-            self.selectedGroupIndex = indexPath.item
-            self.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+            self.selectedGroup = self.group.groups![indexPath.item]
+            self.groupsCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            self.groupsCollectionView.reloadData()
+            self.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
             self.collectionView.reloadData()
         }
     }
